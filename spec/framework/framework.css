@@ -1,0 +1,6 @@
+* { font-family: Helvetica, Sans-serif }
+.fixture, .pass, .fail { padding: 6px; margin-bottom: 4px; }
+.fixture { border: 2px solid gray; background-color: #efefef; margin-top: 20px; }
+.pass { border: 2px solid green; }
+.fail { border: 2px solid red; }
+.tabs { margin-bottom: 8px; }

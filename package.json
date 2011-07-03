@@ -1,0 +1,14 @@
+{
+  "name": "quasi",
+  "description": "Tiny traversal and manipulation utility with jQuery-subset API",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joshski/quasi",
+  "authors": ["Josh Chisholm <@joshski>"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshski/quasi.git"
+  },
+  "keywords": ["dom", "jquery", "querySelector"],
+  "main": "./quasi.js",
+  "ender": "./ender.js"
+}
