@@ -7,10 +7,10 @@ assert(function($) { equal($("X").get().length, 0); });
 assert(function($) { $("a").addClass("b"); equal($("a").attr("class"), "b"); });
 assert(function($) { $("a").hide(); equal($("a").get()[0].style.display, "none"); });
 
-fixture("<p class=\"x\">chicken</a>");
+fixture("<p class=\"x\">chicken</p>");
 assert(function($) { $("p").addClass("y z"); equal($("p").attr("class"), "x y z"); });
 
-fixture("<p style=\"display:none\">sandwich</a>");
+fixture("<p style=\"display:none\">sandwich</p>");
 assert(function($) { $("*").show(); equal($("*").get()[0].style.display, ""); });
 
 fixture("<ul> <li>A</li> <li>B</li> <li class=\"y\">C</li> </ul>");
@@ -48,6 +48,8 @@ assert(function($) {
   equal(texts.length, 3);
 });
 
-fixture("<p><span><h1>giraffe</h1></span></p>");
+fixture("<div><span><h1>giraffe</h1></span></div>");
 assert(function($) { equal($("h1").parent().get()[0].tagName, "SPAN"); });
-assert(function($) { equal($("p").children("span").children().eq(0).get()[0].tagName, "H1"); });
+assert(function($) {
+  equal($("div").children("span").children().eq(0).get()[0].tagName, "H1");
+});
